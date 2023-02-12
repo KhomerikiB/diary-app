@@ -6,8 +6,7 @@
   min-height: var(--min-layout-height);
   display: flex;
   flex-direction: column;
-  height: calc(100vh - calc(100vh - 100%));
-  height: -webkit-fill-available;
+  height: 100%;
   padding-top: var(--top-space);
   padding-bottom: 5rem;
   ::-webkit-scrollbar {
