@@ -1,0 +1,31 @@
+.layout {
+  --min-layout-height: 80rem;
+  @media (max-width: 550px) {
+    --min-layout-height: 60rem;
+  }
+  height: 100vh;
+  min-height: var(--min-layout-height);
+  display: flex;
+  flex-direction: column;
+  padding-top: var(--top-space);
+  padding-bottom: 5rem;
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #c4c4c4;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #cfcfcf;
+  }
+}

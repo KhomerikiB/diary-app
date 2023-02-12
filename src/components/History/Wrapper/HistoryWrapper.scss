@@ -1,0 +1,23 @@
+.history-wrapper {
+  --padding: 4rem 0;
+  @media (max-width: 550px) {
+    --padding: 2rem 0;
+  }
+  display: flex;
+  overflow-x: auto;
+  margin-top: auto;
+  padding: var(--padding);
+  direction: rtl;
+}
+.history-inner {
+  --padding: 0 4rem;
+  --gap: 3rem;
+  @media (max-width: 550px) {
+    --padding: 0 2rem;
+    --gap: 1.4rem;
+  }
+  display: flex;
+  direction: ltr;
+  gap: var(--gap);
+  padding: var(--padding);
+}

@@ -1,0 +1,13 @@
+:root {
+  --white: #fff;
+  --grey: #eeeeee;
+  --black: #000;
+  --main: #ff5433;
+  --main-light: rgba(255, 84, 51, 0.2);
+  --gradient-default: linear-gradient(to right, white, rgb(214, 214, 214));
+  --box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  --font: "HelveticaNeueLTGEOW82-55Rm";
+  --top-space: 10vh;
+  --transition: all 0.3s ease;
+}

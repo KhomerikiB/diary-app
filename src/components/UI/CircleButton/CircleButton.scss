@@ -1,0 +1,38 @@
+.circle-button {
+  all: unset;
+  &.main {
+    --ratio: 4rem;
+    @media (max-width: 550px) {
+      --ratio: 3rem;
+      font-size: 1.4rem;
+    }
+  }
+  &.small {
+    --ratio: 3rem;
+    font-size: 1.4rem;
+    @media (max-width: 550px) {
+      --ratio: 2.2rem;
+      font-size: 1.2rem;
+    }
+  }
+  flex: none;
+  width: var(--ratio);
+  height: var(--ratio);
+  border-radius: 50%;
+  border: 2px solid var(--main);
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:not(.circle-button--active):hover {
+    background-color: var(--main-light);
+  }
+  &--active {
+    color: var(--white);
+    background-color: var(--main);
+  }
+  &:disabled {
+    pointer-events: none;
+  }
+}
