@@ -1,12 +1,13 @@
 .layout {
   --min-layout-height: 80rem;
   @media (max-width: 550px) {
-    --min-layout-height: 52rem;
+    --min-layout-height: 470px;
   }
-  height: 100vh;
   min-height: var(--min-layout-height);
   display: flex;
   flex-direction: column;
+  height: calc(100vh - calc(100vh - 100%));
+  height: -webkit-fill-available;
   padding-top: var(--top-space);
   padding-bottom: 5rem;
   ::-webkit-scrollbar {

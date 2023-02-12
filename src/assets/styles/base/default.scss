@@ -5,3 +5,8 @@ body {
   font-family: var(--font);
   font-size: 1.6rem;
 }
+html,
+body,
+#root {
+  height: 100%;
+}

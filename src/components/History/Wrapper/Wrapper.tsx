@@ -1,5 +1,5 @@
 import { Card } from "components/History/Card";
-import { useContext, useEffect } from "react";
+import { useContext, useRef } from "react";
 import HistoryContext from "context/HistoryContext";
 import "./HistoryWrapper.scss";
 import { HistoryContextType } from "types/HistoryContextType";
@@ -7,15 +7,10 @@ import { useHorizontalScroll } from "hooks/useHorizontalScroll";
 const HistoryWrapper = () => {
   const { history } = useContext(HistoryContext) as HistoryContextType;
   const scrollRef = useHorizontalScroll();
-  useEffect(() => {
-    const el = scrollRef.current;
-    if (el) {
-      el.scrollLeft = 1000;
-    }
-  }, [scrollRef]);
+  const scrollInner = useRef<HTMLDivElement>(null);
   return (
     <div className="history-wrapper" ref={scrollRef}>
-      <div className="history-inner">
+      <div className="history-inner" ref={scrollInner}>
         {history?.map((item) => (
           <Card
             key={item.id}
