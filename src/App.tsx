@@ -41,12 +41,13 @@ function App() {
   }, []);
   useEffect(() => {
     const setHistoryToLocalStorage = () => {
-      if (history) attachListToLocalStorage(history);
+      if (history && document.visibilityState === "hidden")
+        attachListToLocalStorage(history);
     };
     // set current updates to localstorage before tab close
-    window.addEventListener("beforeunload", setHistoryToLocalStorage);
+    window.addEventListener("visibilitychange", setHistoryToLocalStorage);
     return () => {
-      window.removeEventListener("beforeunload", setHistoryToLocalStorage);
+      window.removeEventListener("visibilitychange", setHistoryToLocalStorage);
     };
   }, [history]);
   return (

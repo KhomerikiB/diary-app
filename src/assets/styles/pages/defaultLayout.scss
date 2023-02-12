@@ -1,7 +1,7 @@
 .layout {
   --min-layout-height: 80rem;
   @media (max-width: 550px) {
-    --min-layout-height: 60rem;
+    --min-layout-height: 52rem;
   }
   height: 100vh;
   min-height: var(--min-layout-height);
