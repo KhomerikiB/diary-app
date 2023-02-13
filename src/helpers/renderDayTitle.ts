@@ -5,7 +5,7 @@ import { isSameWeek, parseISO, format, isSameYear } from "date-fns";
  * @param day
  * @returns
  */
-const renderDayTitle = (day: any) => {
+const renderDayTitle = (day: string) => {
   const currentDate = new Date();
   const parsedDay = parseISO(day);
   const isCurrentWeekDay = isSameWeek(currentDate, parsedDay, {

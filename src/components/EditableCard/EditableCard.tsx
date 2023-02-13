@@ -17,7 +17,7 @@ const EditableCard = () => {
     const { value } = e.currentTarget;
     setHistory((prev) => {
       if (prev === null) return prev;
-      return prev.map((item: any) => {
+      return prev.map((item) => {
         return {
           ...item,
           description: item.id === editableContentID ? value : item.description,
@@ -28,7 +28,7 @@ const EditableCard = () => {
   const ratingHandler = (num: number) => {
     setHistory((prev) => {
       if (prev === null) return prev;
-      return prev?.map((item: any) => {
+      return prev?.map((item) => {
         return {
           ...item,
           rating: item.id === editableContentID ? num : item.rating,

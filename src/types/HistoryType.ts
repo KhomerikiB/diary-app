@@ -1,5 +1,5 @@
 export type HistoryType = {
-  day: any;
+  day: string;
   description: string;
   id: string;
   rating: number | null;
